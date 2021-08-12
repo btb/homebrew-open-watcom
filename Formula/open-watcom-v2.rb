@@ -5,6 +5,12 @@ class OpenWatcomV2 < Formula
   version "2.0-2021-08-01"
   sha256 "3971d6dbbdb859547f7392edd336a1896db8f93f108a2756d69207a38de4cb82"
   license "Watcom-1.0"
+
+  bottle do
+    root_url "https://github.com/btb/homebrew-open-watcom/releases/download/open-watcom-v2-2.0-2021-08-01"
+    sha256 cellar: :any_skip_relocation, catalina:     "b23d987944697ee8f1a0e02e545051b348c7ff7c27a6aee4d2ed2c82aabd5749"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f5f5ac81b86c37c3ec3cea34cb5a639d5d2e592efb96f1410c442b90fefcb965"
+  end
   env :std
   keg_only "you should use a script to set up your dev environment"
 

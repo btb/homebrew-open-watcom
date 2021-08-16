@@ -23,9 +23,9 @@ class OpenWatcomV2 < Formula
 
   depends_on "dosbox" => :build
 
-  patch :DATA
-
   def install
+    ENV.deparallelize # race conditions in bld/wmake/posmake
+
     # set the source root
     inreplace "setvars.sh", "export OWROOT=$(realpath `pwd`)", "export OWROOT=#{buildpath}"
 
@@ -47,30 +47,3 @@ class OpenWatcomV2 < Formula
     system "true"
   end
 end
-
-__END__
-diff --git a/bld/wmake/posmake b/bld/wmake/posmake
-index 51c9320..08adda0 100644
---- a/bld/wmake/posmake
-+++ b/bld/wmake/posmake
-@@ -30,7 +30,7 @@ memory.o: ../c/memory.c
- 	$(CC) $(CFLAGS) -c $?
- mexec.o: ../c/mexec.c
- 	$(CC) $(CFLAGS) -c $?
--mglob.o: ../c/mglob.c
-+mglob.o: ../c/mglob.c isarray.gh
- 	$(CC) $(CFLAGS) -c $?
- mhash.o: ../c/mhash.c
- 	$(CC) $(CFLAGS) -c $?
-@@ -46,9 +46,9 @@ mparse.o: ../c/mparse.c
- 	$(CC) $(CFLAGS) -c $?
- mpreproc.o: ../c/mpreproc.c
- 	$(CC) $(CFLAGS) -c $?
--mrcmsg.o: ../c/mrcmsg.c
-+mrcmsg.o: ../c/mrcmsg.c usage.gh
- 	$(CC) $(CFLAGS) -c $?
--msg.o: ../c/msg.c
-+msg.o: ../c/msg.c usage.gh
- 	$(CC) $(CFLAGS) -c $?
- mstream.o: ../c/mstream.c
- 	$(CC) $(CFLAGS) -c $?

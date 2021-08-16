@@ -1,6 +1,6 @@
 class Jwasm < Formula
   desc "Free Masm-compatible assembler"
-  homepage "http://jwasm.github.io"
+  homepage "https://jwasm.github.io"
   url "https://github.com/JWasm/JWasm/archive/refs/tags/2.13.tar.gz"
   sha256 "82bc14860ec1d0552daeffbd202f83f9bba6a2756056b5e21ef81fabdb8e83a4"
   license "Watcom-1.0"

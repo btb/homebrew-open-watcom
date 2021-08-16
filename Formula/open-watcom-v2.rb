@@ -12,9 +12,9 @@ class OpenWatcomV2 < Formula
 
   bottle do
     root_url "https://github.com/btb/homebrew-open-watcom/releases/download/open-watcom-v2-2.0-2021-08-01"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, catalina:     "a366b436f442db8060e661796c4a8348e57521b81eee40ded7af099c5dfec377"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "56ddb6d2673baf22a73db25c820fa605351228b9b3f4675f3d3465afa68de901"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, catalina:     "cfe9e23bb2ad79cc9051d3a8da3bd6a8df6679231d082362382b1a6bf8ab3753"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b3005dcfaf5af6f551d60b5ea222a6f3f3e42c1d8af7eeeaf785df7c35577f9e"
   end
 
   env :std

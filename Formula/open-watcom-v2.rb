@@ -39,7 +39,7 @@ class OpenWatcomV2 < Formula
       system(". ./setvars.sh && cd bld && builder rel os_osx")
     end
     on_linux do
-      system(". ./setvars.sh && cd bld && builder rel os_linux")
+      system(". ./setvars.sh && cd bld && builder rel os_linux cpu_x64")
     end
   end
 

@@ -6,9 +6,9 @@ class Jwasm < Formula
   license "Watcom-1.0"
 
   bottle do
-    root_url "https://github.com/btb/homebrew-open-watcom/releases/download/jwasm-2.13"
-    sha256 cellar: :any_skip_relocation, catalina:     "4a6c2fb4c486798d3f12132cbe357584da195aff4bbe7c8c73da5a28b0cafd6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "af8ea1056e7549bbceda330c421d4ab8902ce3444c3e43eaa83d70b5de3a7db8"
+    root_url "https://github.com/btb/homebrew-open-watcom/releases/download/jwasm-2.14"
+    sha256 cellar: :any_skip_relocation, catalina:     "8297479abbf5d521b5a8cf20c1f1e4346ea3e076339dca75263a0b6b464fa694"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1e3a3d50d7cd4a1597e9315edafa23a8592d5ebfc6a4cc59c5ef438f8664ef5f"
   end
 
   patch do

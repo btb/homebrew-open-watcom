@@ -33,13 +33,8 @@ class OpenWatcomV2 < Formula
     # set the install root
     ENV["OWRELROOT"] = prefix
 
-    system("./build.sh", "boot")
-    on_macos do
-      system(". ./setvars.sh && cd bld && builder rel os_osx")
-    end
-    on_linux do
-      system(". ./setvars.sh && cd bld && builder rel os_linux cpu_x64")
-    end
+    # build it
+    system("./buildrel.sh")
   end
 
   test do

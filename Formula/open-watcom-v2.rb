@@ -33,7 +33,7 @@ class OpenWatcomV2 < Formula
     # set the install root
     ENV["OWRELROOT"] = prefix
 
-    system("./buildrel.sh", "boot")
+    system("./buildrel.sh", "rel")
   end
 
   test do

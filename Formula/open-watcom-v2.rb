@@ -44,7 +44,7 @@ class OpenWatcomV2 < Formula
     # build headers and libs
 
     # If necessary, build clibext library (64-bit)
-    system(". ./setvars.sh && cd bld/watcom && builder rel")
+    # system(". ./setvars.sh && cd bld/watcom && builder rel")
     # Start with language and API headers
     system(". ./setvars.sh && cd bld/hdr && builder rel")
     system(". ./setvars.sh && cd bld/os2api && builder rel")
@@ -63,71 +63,71 @@ class OpenWatcomV2 < Formula
     # Start with DOS4GW DOS extender stub.
     system(". ./setvars.sh && cd bld/wstuba && builder rel")
     # Continue with Causeway DOS extender.
-    system(". ./setvars.sh && cd bld/causeway && builder rel")
+    # system(". ./setvars.sh && cd bld/causeway && builder rel")
     # Continue with WIN386 extender.
-    system(". ./setvars.sh && cd bld/win386 && builder rel")
+    # system(". ./setvars.sh && cd bld/win386 && builder rel")
     # Now we have enough to start cross building everything else
     # Start with the libs used by various tools
-    system(". ./setvars.sh && cd bld/wres && builder rel")
-    system(". ./setvars.sh && cd bld/orl && builder rel")
-    system(". ./setvars.sh && cd bld/owl && builder rel")
+    # system(". ./setvars.sh && cd bld/wres && builder rel")
+    # system(". ./setvars.sh && cd bld/orl && builder rel")
+    # system(". ./setvars.sh && cd bld/owl && builder rel")
     system(". ./setvars.sh && cd bld/dwarf && builder rel")
-    system(". ./setvars.sh && cd bld/cfloat && builder rel")
+    # system(". ./setvars.sh && cd bld/cfloat && builder rel")
     # Continue with the assemblers/librarian/linker/make
-    system(". ./setvars.sh && cd bld/wasm && builder rel")
-    system(". ./setvars.sh && cd bld/as && builder rel")
-    system(". ./setvars.sh && cd bld/nwlib && builder rel")
-    system(". ./setvars.sh && cd bld/wl && builder rel")
-    system(". ./setvars.sh && cd bld/wmake && builder rel")
-    system(". ./setvars.sh && cd bld/wtouch && builder rel")
+    # system(". ./setvars.sh && cd bld/wasm && builder rel")
+    # system(". ./setvars.sh && cd bld/as && builder rel")
+    # system(". ./setvars.sh && cd bld/nwlib && builder rel")
+    # system(". ./setvars.sh && cd bld/wl && builder rel")
+    # system(". ./setvars.sh && cd bld/wmake && builder rel")
+    # system(". ./setvars.sh && cd bld/wtouch && builder rel")
     # On to the compilers
-    system(". ./setvars.sh && cd bld/cg && builder rel")
-    system(". ./setvars.sh && cd bld/cc && builder rel")
-    system(". ./setvars.sh && cd bld/plusplus && builder rel")
-    system(". ./setvars.sh && cd bld/f77/wfc && builder rel")
+    # system(". ./setvars.sh && cd bld/cg && builder rel")
+    # system(". ./setvars.sh && cd bld/cc && builder rel")
+    # system(". ./setvars.sh && cd bld/plusplus && builder rel")
+    # system(". ./setvars.sh && cd bld/f77/wfc && builder rel")
     # Resource tools, first Resource compiler
-    system(". ./setvars.sh && cd bld/rc && builder rel")
+    # system(". ./setvars.sh && cd bld/rc && builder rel")
     # Continue with SDK tools
-    system(". ./setvars.sh && cd bld/wpi && builder rel")
-    system(". ./setvars.sh && cd bld/commonui && builder rel")
-    system(". ./setvars.sh && cd bld/sdk && builder rel")
+    # system(". ./setvars.sh && cd bld/wpi && builder rel")
+    # system(". ./setvars.sh && cd bld/commonui && builder rel")
+    # system(". ./setvars.sh && cd bld/sdk && builder rel")
     # Now miscellaneous command line tools
-    system(". ./setvars.sh && cd bld/ndisasm && builder rel")
-    system(". ./setvars.sh && cd bld/exedump && builder rel")
-    system(". ./setvars.sh && cd bld/dmpobj && builder rel")
-    system(". ./setvars.sh && cd bld/wcl && builder rel")
-    system(". ./setvars.sh && cd bld/f77/wfl && builder rel")
-    system(". ./setvars.sh && cd bld/wstrip && builder rel")
+    # system(". ./setvars.sh && cd bld/ndisasm && builder rel")
+    # system(". ./setvars.sh && cd bld/exedump && builder rel")
+    # system(". ./setvars.sh && cd bld/dmpobj && builder rel")
+    # system(". ./setvars.sh && cd bld/wcl && builder rel")
+    # system(". ./setvars.sh && cd bld/f77/wfl && builder rel")
+    # system(". ./setvars.sh && cd bld/wstrip && builder rel")
     # User interface libs
-    system(". ./setvars.sh && cd bld/ncurses && builder rel")
+    # system(". ./setvars.sh && cd bld/ncurses && builder rel")
     system(". ./setvars.sh && cd bld/ui && builder rel")
     system(". ./setvars.sh && cd bld/gui && builder rel")
-    system(". ./setvars.sh && cd bld/aui && builder rel")
+    # system(". ./setvars.sh && cd bld/aui && builder rel")
     # The vi(w) editor
-    system(". ./setvars.sh && cd bld/rcsdll && builder rel")
-    system(". ./setvars.sh && cd bld/vi && builder rel")
+    # system(". ./setvars.sh && cd bld/rcsdll && builder rel")
+    # system(". ./setvars.sh && cd bld/vi && builder rel")
     # Build the debugger and sampler
-    system(". ./setvars.sh && cd bld/dip && builder rel")
-    system(". ./setvars.sh && cd bld/mad && builder rel")
-    system(". ./setvars.sh && cd bld/rsilib && builder rel")
-    system(". ./setvars.sh && cd bld/wattcp && builder rel")
-    system(". ./setvars.sh && cd bld/trap && builder rel")
-    system(". ./setvars.sh && cd bld/wv && builder rel")
-    system(". ./setvars.sh && cd bld/wsample && builder rel")
+    # system(". ./setvars.sh && cd bld/dip && builder rel")
+    # system(". ./setvars.sh && cd bld/mad && builder rel")
+    # system(". ./setvars.sh && cd bld/rsilib && builder rel")
+    # system(". ./setvars.sh && cd bld/wattcp && builder rel")
+    # system(". ./setvars.sh && cd bld/trap && builder rel")
+    # system(". ./setvars.sh && cd bld/wv && builder rel")
+    # system(". ./setvars.sh && cd bld/wsample && builder rel")
     # GUI tools libraries
     system(". ./setvars.sh && cd bld/wclass && builder rel")
     # Other GUI tools
-    system(". ./setvars.sh && cd bld/wprof && builder rel")
-    system(". ./setvars.sh && cd bld/browser && builder rel")
+    # system(". ./setvars.sh && cd bld/wprof && builder rel")
+    # system(". ./setvars.sh && cd bld/browser && builder rel")
     # The IDE tools
-    system(". ./setvars.sh && cd bld/editdll && builder rel")
-    system(". ./setvars.sh && cd bld/idebatch && builder rel")
-    system(". ./setvars.sh && cd bld/ide && builder rel")
+    # system(". ./setvars.sh && cd bld/editdll && builder rel")
+    # system(". ./setvars.sh && cd bld/idebatch && builder rel")
+    # system(". ./setvars.sh && cd bld/ide && builder rel")
     # The miscelaneous tools
-    system(". ./setvars.sh && cd bld/cmdedit && builder rel")
-    system(". ./setvars.sh && cd bld/cvpack && builder rel")
+    # system(". ./setvars.sh && cd bld/cmdedit && builder rel")
+    # system(". ./setvars.sh && cd bld/cvpack && builder rel")
     # OW clones for MS tools
-    system(". ./setvars.sh && cd bld/mstools && builder rel")
+    # system(". ./setvars.sh && cd bld/mstools && builder rel")
     # Miscelaneous files
     system(". ./setvars.sh && cd bld/misc && builder rel")
     system(". ./setvars.sh && cd bld/bdiff && builder rel")
@@ -137,17 +137,17 @@ class OpenWatcomV2 < Formula
     # IDE samples
     system(". ./setvars.sh && cd bld/idedemo && builder rel")
     # Build help viewer
-    system(". ./setvars.sh && cd bld/hlpview && builder rel")
+    # system(". ./setvars.sh && cd bld/hlpview && builder rel")
     # Build help compilers
-    system(". ./setvars.sh && cd bld/hcdos && builder rel")
-    system(". ./setvars.sh && cd bld/hcwin && builder rel")
-    system(". ./setvars.sh && cd bld/wipfc && builder rel")
-    system(". ./setvars.sh && cd bld/bmp2eps && builder rel")
+    # system(". ./setvars.sh && cd bld/hcdos && builder rel")
+    # system(". ./setvars.sh && cd bld/hcwin && builder rel")
+    # system(". ./setvars.sh && cd bld/wipfc && builder rel")
+    # system(". ./setvars.sh && cd bld/bmp2eps && builder rel")
     # Copy the redistributable components
     system(". ./setvars.sh && cd bld/redist && builder rel")
     # Build installer tools
-    system(". ./setvars.sh && cd bld/uninstal && builder rel")
-    system(". ./setvars.sh && cd bld/setupgui && builder rel")
+    # system(". ./setvars.sh && cd bld/uninstal && builder rel")
+    # system(". ./setvars.sh && cd bld/setupgui && builder rel")
     # Build text documents
     system(". ./setvars.sh && cd bld/docstxt && builder rel")
   end
